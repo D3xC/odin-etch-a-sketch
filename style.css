@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.pad {
+  margin: 50px auto;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  /* border: 2px solid black; */
+}
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.row {
+  display: flex;
+  height: 25px;
+}
+
+.cell {
+  height: 25px;
+  width: 25px;
+}
+
+.cell:hover{
+  background-color: black;
+}
