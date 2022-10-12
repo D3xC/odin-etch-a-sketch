@@ -16,6 +16,7 @@ function createSketchPad(dimension) {
     for (let j = 1; j <= dimension; j++) {
       const cell = document.createElement("div");
       cell.classList.add("cell");
+      cell.addEventListener("mouseover", colorCell);
       row.appendChild(cell);
     }
     sketchPad.appendChild(row);
@@ -25,8 +26,8 @@ function createSketchPad(dimension) {
 
 function destroySketchPad() { }
 
-function colorCell(e) {
-  e.target.style.backgroundColor = black;
+function colorCell() {
+  this.style.backgroundColor = "black";
 }
 
 
