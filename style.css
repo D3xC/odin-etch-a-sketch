@@ -29,10 +29,18 @@
 }
 
 button {
-  width: 100px;
-  height: 25px;
+  width: 125px;
+  height: 35px;
   font-family: "Roboto";
   background-color: white;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+button:hover, button.active {
+  font-weight: bold;
+  background-color: black;
+  color: white;
 }
 
 h1 {

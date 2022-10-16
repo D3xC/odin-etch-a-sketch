@@ -20,6 +20,7 @@ function setControls() {
   const eraseMode = document.createElement("button");
   const clear = document.createElement("button");
   defaultMode.setAttribute("id", "default");
+  defaultMode.classList.add("active");
   rainbowMode.setAttribute("id", "rainbow");
   eraseMode.setAttribute("id", "erase");
   defaultMode.textContent = "Default Mode"
@@ -66,7 +67,16 @@ function clearSketchPad() {
 }
 
 function setMode() {
+  const buttons = document.querySelectorAll("button");
   sketchMode = this.getAttribute("id");
+  buttons.forEach(button => {
+    if (button.getAttribute("id") == sketchMode) {
+      button.classList.add("active");
+    } else {
+      button.classList.remove("active");
+    }
+  });
+
 }
 
 function colorCell() {
@@ -75,7 +85,7 @@ function colorCell() {
       this.style.backgroundColor = "black";
       break;
     case "rainbow":
-      this.style.backgroundColor = randomColor();
+      this.style.backgroundColor = getRandomColor();
       break;
     case "erase":
       this.style.backgroundColor = "white";
@@ -83,7 +93,7 @@ function colorCell() {
   }
 }
 
-function randomColor() {
+function getRandomColor() {
   const rColor = Math.floor(Math.random() * 255);
   const gColor = Math.floor(Math.random() * 255);
   const bColor = Math.floor(Math.random() * 255);
