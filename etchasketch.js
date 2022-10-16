@@ -2,12 +2,6 @@ const container = document.querySelector(".container");
 let sketchMode = "default"
 
 function setLayout() {
-  const titleDiv = document.createElement("div");
-  const title = document.createElement("h1");
-  title.textContent = "Etch-A-Sketch";
-  titleDiv.appendChild(title);
-  titleDiv.classList.add("title");
-  container.appendChild(titleDiv);
   setControls();
   createSketchPad(30);
 }

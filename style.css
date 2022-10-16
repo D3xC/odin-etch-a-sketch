@@ -6,9 +6,7 @@
 
 .container {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
 
 .title {
@@ -18,19 +16,20 @@
 }
 
 .pad {
-  margin: 50px auto;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
 .controls {
   display: flex;
-  width: 40%;
-  justify-content: space-around;
+  flex-direction: column;
+  width: 10%;
+  justify-content: center;
+  gap: 25px;
 }
 
 button {
-  width: 125px;
-  height: 35px;
+  width: 150px;
+  height: 40px;
   font-family: "Roboto";
   background-color: white;
   padding: 5px;
@@ -51,14 +50,9 @@ h1 {
 
 .row {
   display: flex;
-  /* height: 25px; */
 }
 
 .cell {
   height: 15px;
   width: 15px;
 }
-
-/* .cell:hover{
-  background-color: black;
-} */
